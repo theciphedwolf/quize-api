@@ -1,0 +1,12 @@
+# dependencies
+/node_modules
+
+
+# misc
+config.env
+
+# production
+/build
+
+#sampleFiles
+/controllers/sampleController
