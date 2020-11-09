@@ -2,6 +2,8 @@ const express = require('express');
 const questionController = require('./../controllers/questionController');
 const router = express.Router();
 
+router.use('/quiz/:id', questionController.getQuizQuestion);
+
 router
   .route('/')
   .get(questionController.getAllQuestions)

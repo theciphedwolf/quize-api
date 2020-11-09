@@ -43,12 +43,12 @@ const quizSchema = new mongoose.Schema(
         type: Boolean
       }
     },
-    quizInstruction: {
+    quizInstructions: {
       instructions: {
         type: String
       },
       quizInitiationForm: {
-        type: [Object]
+        type: []
       }
     },
     quizGradAndSummary: {

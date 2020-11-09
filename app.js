@@ -20,6 +20,7 @@ const questionRouter = require('./routes/questionRoutes');
 const quizRouter = require('./routes/quizRoutes');
 const fileUploadRouter = require('./routes/uploadFileRoute');
 const studentGroupRouter = require('./routes/studentGroupsRoute');
+const resultRouter = require('./routes/resultRoutes');
 
 // Start express app
 const app = express();
@@ -98,8 +99,10 @@ app.use('/api/v1/users', userRouter);
 app.use('/api/v1/quizs', quizRouter);
 app.use('/api/v1/subjects', subjectRouter);
 app.use('/api/v1/questions', questionRouter);
+app.use('/api/v1/results', resultRouter);
 app.use('/api/v1/studentgroups', studentGroupRouter);
 app.use('/api/v1/uploadcsv', fileUploadRouter);
+
 app.all('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
 });
